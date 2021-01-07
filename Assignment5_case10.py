@@ -1,19 +1,16 @@
-def sum(n):
-    if n==0:
-        return n
-    else:
-        return (n%10)+sum(n//10)
-
-def reverse(n): 
-    r = 0
-    while (n != 0): 
-        r = r * 10
-        r = r + n % 10
-        n = n // 10
-        return (r)
-def operation(n): 
-    a=sum(n)
-    b=reverse(n)
-number=int(input("Enter the number==>"))
-operation(number) 
-
+def sum_count_reverse(n):
+    count=0
+    sum=0
+    rev_num=0
+    count=0
+    while n>0:
+        reminder=n%10
+        sum = sum + reminder
+        rev_num=rev_num*10+reminder
+        n=n//10
+        count = count+1
+    print("Sum of the Digits in a given number is ",sum)
+    print("Count==>",count)
+    print("Reverse of the Number is==> ", rev_num)
+number = int(input("Enter the number==>"))
+sum_count_reverse(number)
